@@ -1,0 +1,81 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <link rel="icon" href="icone.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Home</title>
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center mt-5">Area de tranferência</h1>
+    <div class="row">
+        <div class="col-sm-12 input-group mb-3 gNome">
+            <input id="banco" name="nome" type="text" class="form-control" placeholder="Banco" aria-label="Nome"
+                   aria-describedby="sp_nome"/>
+        </div>
+        <div class="col-sm-4 input-group mb-3 gEmail">
+            <input id="agencia" name="email" type="number" class="form-control" placeholder="Agencia" aria-label="Email"
+                   aria-describedby="sp_email"/>
+        </div>
+        <div class="col-sm-6 input-group mb-3 gtelefone">
+            <input id="conta" name="telefone" type="number" class="form-control"
+                   placeholder="conta" aria-label="telefone"
+                   aria-describedby="sp_telefone"/>
+        </div>
+        <div class="col-sm-2 input-group mb-3 gdataNasc">
+            <input id="dv" name="datanasc" type="number" class="form-control"
+                   placeholder="DV" aria-label="datanasc"
+                   aria-describedby="sp_dataNasc"/>
+        </div>
+        <div class="form-floating col-sm-12 mb-3">
+            <select class="form-select" id="tipoConta" aria-label="Floating label select example">
+                <option selected value="1">Conta corrente</option>
+                <option value="2">Conta poupança</option>
+                <option value="3">Conta salário</option>
+            </select>
+            <label for="tipoConta">Tipo de conta a ser creditada</label>
+        </div>
+        <div class="form-floating col-sm-12 mb-3">
+            <select class="form-select" id="tipoPessoa" aria-label="Floating label select example">
+                <option selected value="1">Pessoa fisíca</option>
+                <option value="2">Pessoa Jurídica</option>
+            </select>
+            <label for="tipoPessoa">Tipo de pessoa</label>
+        </div>
+        <div class="col-sm-6 input-group mb-3 gSenha">
+            <input id="nome" name="nome" type="text" class="form-control"
+                   placeholder="Nome" aria-label="nome"
+                   aria-describedby="sp_nome"/>
+        </div>
+        <div class="col-sm-6 input-group mb-3 gSenha">
+            <input id="cpf" name="cpf" type="number" class="form-control"
+                   placeholder="CPF" aria-label="cpf"
+                   aria-describedby="sp_cpf"/>
+        </div>
+        <div class="col-sm-6 input-group mb-3 gSenha">
+            <input id="valor" name="valor" type="money" class="form-control"
+                   placeholder="Valor" aria-label="valor"
+                   aria-describedby="sp_valor"/>
+        </div>
+        <div class="text-center mt-3">
+            <a id="btntransferir" class="btn btn-success" type="submit">Transferir</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
