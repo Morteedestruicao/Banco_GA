@@ -16,9 +16,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
+    <script src="../../JS/home.js" defer></script>
     <link rel="icon" href="icone.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Home</title>
+<style>
+    body{
+        color:#ffffff !important;
+    }
+</style>
 </head>
 <body>
 <div class="container">
@@ -30,16 +36,17 @@
                    aria-describedby="sp_nome"/>
         </div>
         <div class="col-sm-4 input-group mb-3 gEmail">
-            <input id="agencia" name="email" type="number" class="form-control" placeholder="Agencia" aria-label="Email"
+            <input id="agencia" name="email" type="number" class="form-control"
+                   placeholder="Agencia" aria-label="Email"
                    aria-describedby="sp_email"/>
         </div>
         <div class="col-sm-6 input-group mb-3 gtelefone">
             <input id="conta" name="telefone" type="number" class="form-control"
-                   placeholder="conta" aria-label="telefone"
+                   placeholder="Conta" aria-label="telefone"
                    aria-describedby="sp_telefone"/>
         </div>
         <div class="col-sm-2 input-group mb-3 gdataNasc">
-            <input id="dv" name="datanasc" type="number" class="form-control"
+            <input id="DV" name="datanasc" type="number" class="form-control"
                    placeholder="DV" aria-label="datanasc"
                    aria-describedby="sp_dataNasc"/>
         </div>
@@ -58,23 +65,26 @@
             </select>
             <label for="tipoPessoa">Tipo de pessoa</label>
         </div>
-        <div class="col-sm-6 input-group mb-3 gSenha">
+        <div class="col-sm-5 input-group mb-3 gSenha">
             <input id="nome" name="nome" type="text" class="form-control"
                    placeholder="Nome" aria-label="nome"
                    aria-describedby="sp_nome"/>
         </div>
-        <div class="col-sm-6 input-group mb-3 gSenha">
+        <div class="col-sm-4 input-group mb-3 gSenha">
             <input id="cpf" name="cpf" type="number" class="form-control"
                    placeholder="CPF" aria-label="cpf"
                    aria-describedby="sp_cpf"/>
         </div>
-        <div class="col-sm-6 input-group mb-3 gSenha">
+        <div class="col-sm-3 input-group mb-3 gSenha">
             <input id="valor" name="valor" type="money" class="form-control"
                    placeholder="Valor" aria-label="valor"
                    aria-describedby="sp_valor"/>
         </div>
-        <div class="text-center mt-3">
+        <div class="col-sm-6 text-start mt-3">
             <a id="btntransferir" class="btn btn-success" type="submit">Transferir</a>
+        </div>
+        <div class="col-sm-6 text-end mt-3">
+            <a id="btndeposito" class="btn btn-success" type="submit">Efetuar depósito</a>
         </div>
     </div>
 </div>

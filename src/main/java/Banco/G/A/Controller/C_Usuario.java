@@ -12,37 +12,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class C_Usuario {
 
-
-    //Isso aqui vai pro C_Cadastro
-    @GetMapping("/cadastro")
-    public String getUsuario() {
-        return "usuario/cadastro";
-    }
-
-    @PostMapping("/cadastro")
-    public String cadastroUsuario(@RequestParam("nome") String nome,
-                                  @RequestParam("email") String email,
-                                  @RequestParam("senha") String senha,
-                                  @RequestParam("cpf") String cpf,
-                                  @RequestParam("telefone") String telefone,
-                                  @RequestParam("datanasc") String datanasc
-    ) {
-        S_Usuario.cadastroUsuario(nome, email, senha, cpf, telefone, datanasc);
-        return "usuario/cadastro";
-    }
-    //-------------------------------------
-
     @GetMapping("/")
     public String getLogin(){
         return "login/Index";
     }
-
-    //Esse vai pro C_Home
-    @GetMapping("/Home")
-    public String getHome(){
-        return "home/Home";
-    }
-    //----------
 
     @PostMapping("/")
     @ResponseBody

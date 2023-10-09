@@ -16,7 +16,7 @@ public class M_Usuario {
     private String senha;
     private LocalDate datanasc;
     private Long telefone;
-    private Long dinheiro = Long.valueOf(0);
+    private double dinheiro = 0;
 
     public Long getId() {
         return id;
@@ -74,7 +74,7 @@ public class M_Usuario {
         this.telefone = telefone;
     }
 
-    public Long getDinheiro() {
+    public double getDinheiro() {
         return dinheiro;
     }
 
