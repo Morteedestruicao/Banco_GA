@@ -27,5 +27,5 @@ function cadastrarUsuario(){
         error: function(){
             alert("deu ruim lek");
         }
-    })
+    });
 }

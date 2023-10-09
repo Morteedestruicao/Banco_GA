@@ -14,7 +14,7 @@ public class C_Usuario {
 
     @GetMapping("/")
     public String getLogin(){
-        return "login/Index";
+        return "login/index";
     }
 
     @PostMapping("/")

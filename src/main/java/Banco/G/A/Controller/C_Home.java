@@ -10,7 +10,7 @@ public class C_Home {
     public String getHome(HttpSession session, Model model){
         if(session.getAttribute("usuario") != null){
             model.addAttribute("usuario",session.getAttribute("usuario"));
-            return "home/Home";
+            return "/Home";
         }else{
             return "redirect:/";
         }

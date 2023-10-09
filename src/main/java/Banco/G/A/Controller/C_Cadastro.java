@@ -19,7 +19,6 @@ public class C_Cadastro {
                                   @RequestParam("telefone") String telefone,
                                   @RequestParam("datanasc") String datanasc
     ) {
-        S_Usuario.cadastroUsuario(nome, email, senha, cpf, telefone, datanasc);
-        return "usuario/cadastro";
+        return S_Usuario.cadastroUsuario(nome, email, senha, cpf, telefone, datanasc);
     }
 }

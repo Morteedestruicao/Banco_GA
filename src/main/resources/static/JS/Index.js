@@ -9,7 +9,7 @@ function validaCampoVazio(campo) {
 }
 
 function validaLogin() {
-    let podeEnviar = true
+    let podeEnviar = true;
     let cpf = $("#cpf").val();
     let senha = $("#senha").val();
     if (validaCampoVazio(cpf)) {
