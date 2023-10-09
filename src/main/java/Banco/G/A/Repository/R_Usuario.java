@@ -14,6 +14,9 @@ public interface R_Usuario extends JpaRepository<M_Usuario, Long> {
     M_Usuario buscarPorMatriculaSenha(@Param("cpf") Long cpf,
                         @Param("senha") String senha);
 
+    @Query(value="SELECT * FROM usuario WHERE cpf = :cpf",nativeQuery = true)
+    M_Usuario buscarPorCPF(@Param("cpf") Long cpf);
+
     @Modifying
     @Transactional
     @Query("UPDATE M_Usuario usuario SET usuario.senha = :senha where usuario.id = :id")

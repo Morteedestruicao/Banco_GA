@@ -1,6 +1,7 @@
 $("#btnCadastro").click(cadastrarUsuario);
 
 function cadastrarUsuario(){
+    let podeEnviar = true;
     let nome = $("#nome").val();
     let cpf = $("#cpf").val();
     let email = $("#email").val();
@@ -9,23 +10,33 @@ function cadastrarUsuario(){
     let telefone = $("#telefone").val();
     let dinheiro = 0;
 
-    $.ajax({
-        type: "POST",
-        url: "/cadastro",
-        data:{
-            nome:nome,
-            cpf:cpf,
-            email:email,
-            senha:senha,
-            datanasc:datanasc,
-            telefone:telefone,
-            dinheiro:dinheiro,
-        },
-        success:function(){
-            alert("ok");
-        },
-        error: function(){
-            alert("deu ruim lek");
-        }
-    });
+     if(cpf == null){
+     podeEnviar = false;
+     }
+     if(podeEnviar){
+     $.ajax({
+             type: "POST",
+             url: "/cadastro",
+             data:{
+                 nome:nome,
+                 cpf:cpf,
+                 email:email,
+                 senha:senha,
+                 datanasc:datanasc,
+                 telefone:telefone,
+                 dinheiro:dinheiro,
+             },
+             success: function (data){
+             if(data.sucesso){
+                alert("Deu bom!");
+             }else{
+             alert(data.mensagem);
+                }
+             },
+             error: function(){
+                 alert("deu ruim lek");
+             }
+         });
+     }
+
 }

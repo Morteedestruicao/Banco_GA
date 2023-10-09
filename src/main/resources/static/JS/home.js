@@ -1,13 +1,14 @@
-$("#btntranferir").click(tranferencia);
-$("#btndeposito").click(deposito);
+$("#btntransferir").click(tranferencia);
 
 function tranferencia(){
     let podeEnviar = true;
         let cpf = $("#cpf").val();
         let valor = $("#valor").val();
-        let senha = $("#senha").val();
 
-        if(valorTransacao == null){
+        if(valor == null){
+            podeEnviar = false;
+        }
+         if(cpf == null){
             podeEnviar = false;
         }
         if(podeEnviar){
@@ -16,8 +17,7 @@ function tranferencia(){
                 url: "/Home",
                 data:{
                     cpf: cpf,
-                    senha: senha,
-                    dinheiro:valor,
+                    valor:valor,
                 },
                 success: function (data){
                     if(data.sucesso){
@@ -33,22 +33,3 @@ function tranferencia(){
         }
     }
 
-function deposito(){
-    let cpf = $("#cpf").val();
-    let dinheiro = $("#valor").val();
-
-    $.ajax({
-        type: "POST",
-        url: "/Home",
-        data:{
-            cpf:cpf,
-            dinheiro:dinheiro,
-        },
-        success:function(){
-            alert("ok");
-        },
-        error: function(){
-            alert("deu ruim lek");
-        }
-    })
-}
